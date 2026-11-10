@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLADE SMP | Kış Temalı Hayatta Kalma</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #0b0f19;
+            color: #ffffff;
+            overflow-x: hidden;
+            background-image: radial-gradient(circle at 50% 20%, #1a2639 0%, #0b0f19 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        header {
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .logo {
+            font-size: 3.5rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #FF0000, #FF6500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+            letter-spacing: 2px;
+        }
+        .subtitle {
+            color: #a4e5ff;
+            font-size: 1.2rem;
+            margin-top: 10px;
+            font-weight: 600;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .ip-box {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid #FF4300;
+            padding: 20px;
+            border-radius: 12px;
+            display: inline-block;
+            margin: 20px 0;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 0 15px rgba(255, 67, 0, 0.2);
+        }
+        .ip-box:hover {
+            background: rgba(255, 67, 0, 0.1);
+            transform: scale(1.05);
+        }
+        .ip-title {
+            font-size: 0.9rem;
+            color: #a4e5ff;
+            margin-bottom: 5px;
+        }
+        .ip-address {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fff;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+            text-align: left;
+        }
+        .card {
+            background: rgba(164, 229, 255, 0.03);
+            border: 1px solid rgba(164, 229, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+        .card:hover {
+            border-color: #FF6500;
+            transform: translateY(-5px);
+        }
+        .card h3 {
+            color: #a4e5ff;
+            margin-bottom: 10px;
+        }
+        .card p {
+            color: #bbb;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">ʙʟᴀᴅᴇ sᴍᴘ</div>
+        <div class="subtitle">❄️ Kış Temalı En Sert Hayatta Kalma Deneyimi ❄️</div>
+    </header>
+
+    <div class="container">
+        <div class="ip-box" onclick="alert('IP adresi kopyalandı! (Örnek)')">
+            <div class="ip-title">SUNUCU IP ADRESİ (Tıkla Kopyala)</div>
+            <div class="ip-address">play.bladesmp.com</div>
+        </div>
+
+        <div class="features">
+            <div class="card">
+                <h3>❄️ İllegal Kar Eşyaları</h3>
+                <p>Kar Gürzü, Kar Mızrağı ve Kar Kılıcı ile rakiplerine buzun gücünü göster. Eşsiz yeteneklerle savaşın zevkini çıkar!</p>
+            </div>
+            <div class="card">
+                <h3>⛏️ 4x4 Yıkım Aletleri</h3>
+                <p>Sol tıkla maden kazarken etrafındaki alanları ametist kazma hızıyla anında darmadağın et, zamandan kazan.</p>
+            </div>
+            <div class="card">
+                <h3>🛡️ Güvenli Spawn & PvP</h3>
+                <p>Özenle korunan spawn bölgesi, hile korumaları ve adil rekabet ortamıyla tamamen kesintisiz bir SMP deneyimi.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 BLADE SMP. Tüm hakları saklıdır.
+    </footer>
+
+</body>
+</html>
