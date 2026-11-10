@@ -34,9 +34,9 @@
   }
   a { color: inherit; }
   :focus-visible { outline: 3px solid var(--blaze); outline-offset: 3px; }
-
+ 
   .wrap { width: min(1100px, 100% - 3rem); margin-inline: auto; }
-
+ 
   /* HERO */
   .hero {
     position: relative;
@@ -88,7 +88,7 @@
     55% { transform: rotate(-11deg) scaleX(1); opacity: 1; }
     100% { transform: rotate(-11deg) scaleX(1); opacity: .16; }
   }
-
+ 
   .ipbar {
     margin-top: 2.5rem;
     display: inline-flex;
@@ -121,7 +121,7 @@
   .copy:hover { filter: brightness(1.12); }
   .copy:active { transform: translateY(1px); }
   .copy.done { background: var(--bone); }
-
+ 
   .scroll-hint {
     position: absolute;
     z-index: 2;
@@ -132,7 +132,7 @@
     font-size: .95rem;
     text-decoration: none;
   }
-
+ 
   /* SECTIONS */
   section.block { padding: 6rem 0; border-top: 1px solid var(--line); }
   h2 {
@@ -144,7 +144,7 @@
     color: var(--bone);
   }
   .lead { max-width: 40rem; color: var(--muted); margin-bottom: 2.4rem; }
-
+ 
   /* COMMUNITY */
   .links { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.4rem; }
   .link-card {
@@ -161,7 +161,7 @@
   .link-card h3 { font-family: var(--head); font-weight: 800; font-size: 1.9rem; line-height: 1; }
   .link-card .url { color: var(--muted); font-size: .95rem; overflow-wrap: anywhere; }
   .link-card .copy { align-self: flex-start; padding: .8rem 1.4rem; border-radius: 4px; }
-
+ 
   /* ABOUT */
   .about p { max-width: 42rem; font-size: 1.2rem; }
   .about p + p { margin-top: 1rem; color: var(--muted); }
@@ -169,7 +169,7 @@
   .fact { padding-top: 1rem; border-top: 3px solid var(--ember); }
   .fact h3 { font-family: var(--head); font-weight: 800; font-size: 1.6rem; line-height: 1.05; margin-bottom: .3rem; }
   .fact p { color: var(--muted); font-size: 1rem; }
-
+ 
   /* RULES + INFO */
   .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; }
   .rules { list-style: none; counter-reset: rule; }
@@ -198,10 +198,10 @@
   dl.info { display: grid; grid-template-columns: max-content 1fr; gap: .2rem 1.6rem; }
   dl.info dt { font-weight: 600; color: var(--blaze); padding: .6rem 0; border-bottom: 1px solid var(--line); }
   dl.info dd { padding: .6rem 0; border-bottom: 1px solid var(--line); }
-
+ 
   footer { padding: 2.4rem 0 3rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .95rem; }
   footer .wrap { display: flex; flex-wrap: wrap; gap: .6rem 2rem; justify-content: space-between; }
-
+ 
   @media (max-width: 520px) {
     .ipbar { flex-direction: column; width: 100%; }
     .copy { padding: .9rem; }
@@ -215,7 +215,7 @@
 </style>
 </head>
 <body>
-
+ 
 <header class="hero">
   <div class="slash" aria-hidden="true"></div>
   <div class="wrap">
@@ -228,7 +228,7 @@
   </div>
   <a class="scroll-hint" href="#topluluk">Aşağı kaydır</a>
 </header>
-
+ 
 <main>
   <section class="block" id="topluluk">
     <div class="wrap">
@@ -248,7 +248,7 @@
       </div>
     </div>
   </section>
-
+ 
   <section class="block about" id="tanim">
     <div class="wrap">
       <h2>Blade SMP nedir?</h2>
@@ -270,7 +270,7 @@
       </div>
     </div>
   </section>
-
+ 
   <section class="block" id="kurallar">
     <div class="wrap cols">
       <div>
@@ -299,24 +299,24 @@
     </div>
   </section>
 </main>
-
+ 
 <footer>
   <div class="wrap">
     <span>Blade SMP</span>
     <span>Minecraft ile resmi bir bağlantısı yoktur.</span>
   </div>
 </footer>
-
+ 
 <script>
   // LİNKLERİNİ BURADAN DEĞİŞTİR
   var LINKS = {
     discord: "https://discord.gg/DAVET-KODUN",
     youtube: "https://www.youtube.com/@KANAL-ADIN"
   };
-
+ 
   document.getElementById("discord-url").textContent = LINKS.discord;
   document.getElementById("yt-url").textContent = LINKS.youtube;
-
+ 
   function copyText(text) {
     if (navigator.clipboard && window.isSecureContext) {
       return navigator.clipboard.writeText(text);
@@ -333,7 +333,7 @@
       document.body.removeChild(area);
     });
   }
-
+ 
   document.querySelectorAll(".copy").forEach(function (btn) {
     btn.addEventListener("click", function () {
       var text = btn.dataset.copy || LINKS[btn.dataset.copyKey];
