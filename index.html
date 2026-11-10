@@ -10,17 +10,15 @@
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            scroll-behavior: smooth;
         }
         body {
             background-color: #050505;
             color: #ffffff;
             overflow-x: hidden;
-            background-image: radial-gradient(circle at 50% 10%, #1a0808 0%, #050505 80%);
-            min-height: 100vh;
+            scroll-behavior: smooth;
         }
         
-        /* HER BÖLÜM (SCROLL ALANI) */
+        /* Genel Bölüm Düzeni */
         section {
             min-height: 100vh;
             display: flex;
@@ -29,12 +27,12 @@
             align-items: center;
             padding: 60px 20px;
             text-align: center;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+            border-bottom: 1px solid rgba(255, 0, 0, 0.1);
         }
 
         /* 1. BÖLÜM: ANA GİRİŞ & IP */
         .logo {
-            font-size: 4rem;
+            font-size: 4.5rem;
             font-weight: 900;
             background: linear-gradient(135deg, #FF0000, #FF6500);
             -webkit-background-clip: text;
@@ -45,30 +43,30 @@
         }
         .subtitle {
             color: #ff8600;
-            font-size: 1.2rem;
-            margin-bottom: 40px;
+            font-size: 1.3rem;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            margin-bottom: 40px;
+            letter-spacing: 2px;
         }
         .ip-box {
-            background: rgba(20, 5, 5, 0.8);
+            background: rgba(20, 5, 5, 0.9);
             border: 2px solid #FF0000;
-            padding: 20px 40px;
-            border-radius: 12px;
+            padding: 25px 50px;
+            border-radius: 14px;
             cursor: pointer;
             transition: 0.3s;
             box-shadow: 0 0 25px rgba(255, 0, 0, 0.3);
         }
         .ip-box:hover {
-            background: rgba(255, 0, 0, 0.15);
-            transform: scale(1.03);
+            background: rgba(255, 0, 0, 0.2);
+            transform: scale(1.05);
             border-color: #FF6500;
         }
         .ip-title {
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             color: #ff8600;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
             font-weight: bold;
             letter-spacing: 1px;
         }
@@ -90,87 +88,69 @@
             60% {transform: translateY(-5px);}
         }
 
-        /* 2. BÖLÜM: DİSCORD & YOUTUBE LİNKLERİ */
-        .links-container {
+        /* 2. BÖLÜM: SOSYAL MEDYA (DISCORD & YOUTUBE) */
+        .social-container {
             display: flex;
             gap: 20px;
             flex-wrap: wrap;
             justify-content: center;
             margin-top: 30px;
         }
-        .link-card {
-            background: rgba(20, 20, 20, 0.7);
-            border: 1px solid rgba(255, 67, 0, 0.3);
-            padding: 30px 40px;
+        .social-btn {
+            background: rgba(20, 20, 20, 0.8);
+            border: 2px solid #FF4300;
+            padding: 20px 35px;
             border-radius: 12px;
             cursor: pointer;
             transition: 0.3s;
-            min-width: 250px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 0 15px rgba(255, 67, 0, 0.2);
+            text-decoration: none;
         }
-        .link-card:hover {
-            border-color: #FF0000;
+        .social-btn:hover {
+            background: rgba(255, 67, 0, 0.2);
             transform: translateY(-5px);
-            box-shadow: 0 6px 20px rgba(255, 0, 0, 0.2);
-        }
-        .link-card h3 {
-            color: #FF4300;
-            margin-bottom: 10px;
-            font-size: 1.3rem;
-        }
-        .link-card p {
-            color: #bbb;
-            font-size: 0.9rem;
+            border-color: #FF0000;
         }
 
         /* 3. BÖLÜM: TANITIM VE KURALLAR */
         .info-container {
-            max-width: 800px;
+            max-width: 900px;
             text-align: left;
             background: rgba(15, 15, 15, 0.8);
-            border: 1px solid rgba(255, 0, 0, 0.2);
+            border: 1px solid rgba(255, 0, 0, 0.3);
             padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 5px 25px rgba(0,0,0,0.6);
+            border-radius: 16px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.8);
         }
         .info-container h2 {
             color: #FF4300;
-            margin-bottom: 15px;
-            font-size: 1.8rem;
+            font-size: 2rem;
+            margin-bottom: 20px;
             text-align: center;
+            text-transform: uppercase;
         }
-        .info-container p {
-            color: #ccc;
-            font-size: 1.05rem;
-            line-height: 1.6;
-            margin-bottom: 25px;
-            text-align: center;
-        }
-        .rules-title {
+        .info-container h3 {
             color: #ff8600;
-            font-size: 1.3rem;
             margin-top: 25px;
             margin-bottom: 10px;
-            border-bottom: 1px solid rgba(255,134,0,0.2);
+            font-size: 1.3rem;
+            border-bottom: 1px solid rgba(255, 134, 0, 0.2);
             padding-bottom: 5px;
         }
-        .rules-list {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        .rules-list li {
-            color: #ddd;
+        .info-container p, .info-container li {
+            color: #ccc;
+            font-size: 1.05rem;
+            line-height: 1.7;
             margin-bottom: 10px;
-            position: relative;
-            padding-left: 20px;
-            font-size: 0.95rem;
         }
-        .rules-list li::before {
-            content: "▪";
-            color: #FF0000;
-            position: absolute;
-            left: 0;
-            font-size: 1.2rem;
+        .info-container ul {
+            padding-left: 20px;
         }
 
         footer {
@@ -178,66 +158,50 @@
             padding: 20px;
             color: #555;
             font-size: 0.85rem;
-            background: #030303;
+            background: #020202;
+            border-top: 1px solid rgba(255, 255, 255, 0.03);
         }
+
+        /* Bildirim Kutusu (Kopyalandı Uyarısı) */
+        #toast {
+            visibility: hidden;
+            min-width: 250px;
+            background-color: #FF0000;
+            color: #fff;
+            text-align: center;
+            border-radius: 8px;
+            padding: 16px;
+            position: fixed;
+            z-index: 1;
+            left: 50%;
+            bottom: 30px;
+            transform: translateX(-50%);
+            font-weight: bold;
+            box-shadow: 0 0 15px rgba(0,0,0,0.5);
+        }
+        #toast.show {
+            visibility: visible;
+            animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        }
+        @keyframes fadein {from {bottom: 0; opacity: 0;} to {bottom: 30px; opacity: 1;}}
+        @keyframes fadeout {from {bottom: 30px; opacity: 1;} to {bottom: 0; opacity: 0;}}
     </style>
 </head>
 <body>
 
-    <!-- 1. BÖLÜM: GİRİŞ VE IP -->
+    <!-- BÖLÜM 1: ANA GİRİŞ & IP -->
     <section>
         <div class="logo">ʙʟᴀᴅᴇ sᴍᴘ</div>
-        <div class="subtitle">⚡ Profesyonel Hardcore Savaş Deneyimi ⚡</div>
+        <div class="subtitle">⚡ Hardcore & İllegal Savaş Deneyimi ⚡</div>
         
-        <div class="ip-box" onclick="navigator.clipboard.writeText('play.blademc.hosting'); alert('Sunucu IP adresi kopyalandı: play.blademc.hosting');">
+        <div class="ip-box" onclick="copyIP()">
             <div class="ip-title">SUNUCU IP ADRESİ (Kopyalamak için tıkla)</div>
-            <div class="ip-address">play.blademc.hosting</div>
+            <div class="ip-address">play.blademc.play.hosting</div>
         </div>
         
-        <div class="scroll-down">↓ Topluluk bağlantıları için aşağı kaydırın ↓</div>
+        <div class="scroll-down">↓ Sosyal Medya ve Bilgiler için aşağı kaydır ↓</div>
     </section>
 
-    <!-- 2. BÖLÜM: DİSCORD VE YOUTUBE -->
+    <!-- BÖLÜM 2: SOSYAL MEDYA (DISCORD & YOUTUBE) -->
     <section>
-        <div class="logo" style="font-size: 2.5rem;">TOPLULUK</div>
-        <div class="subtitle">Bize Katılın ve Takip Edin</div>
-        
-        <div class="links-container">
-            <!-- Discord Kopyalama Kutusu -->
-            <div class="link-card" onclick="navigator.clipboard.writeText('https://discord.gg/bladesmp'); alert('Discord davet linki kopyalandı!');">
-                <h3>💬 Discord Sunucumuz</h3>
-                <p>Tıklayarak davet bağlantısını kopyala ve aramıza katıl!</p>
-            </div>
-
-            <!-- YouTube Kanal Kutusu -->
-            <div class="link-card" onclick="window.open('https://youtube.com/@seninytadresin', '_blank');">
-                <h3>▶️ YouTube Kanalı</h3>
-                <p>Tıklayarak YouTube kanalımıza git ve videoları izle!</p>
-            </div>
-        </div>
-        <div class="scroll-down" style="margin-top: 40px;">↓ Sunucu tanımı ve kurallar için aşağı kaydırın ↓</div>
-    </section>
-
-    <!-- 3. BÖLÜM: TANITIM VE KURALLAR -->
-    <section>
-        <div class="info-container">
-            <h2>SUNUCU BİLGİLERİ</h2>
-            <p>Aylık op kasalar, gelen özel eşyalar bulunan bir profesyonel smp sunucusudur. Rekabetin, savaşın ve benzersiz özel mekaniklerin buluştuğu noktada yerini al!</p>
-            
-            <div class="rules-title">📜 Sunucu Kuralları</div>
-            <ul class="rules-list">
-                <li>Hile, üçüncü parti yazılım veya oyun içi açıkları (bug) kullanmak kesinlikle yasaktır.</li>
-                <li>Küfür, hakaret, ırkçılık ve oyuncuları taciz etmek kalıcı uzaklaştırma sebebidir.</li>
-                <li>Spawn bölgesinde ve korumalı alanlarda izinsiz yapılaşma veya zarar verme yasaktır.</li>
-                <li>Yetkilileri yanıltmak, dolandırıcılık yapmak veya sunucu huzurunu bozmak yasaktır.</li>
-                <li>Her oyuncu oyun içi rehber kurallarına ve yönetim kararlarına uymakla yükümlüdür.</li>
-            </ul>
-        </div>
-    </section>
-
-    <footer>
-        &copy; 2026 BLADE SMP. Tüm hakları saklıdır.
-    </footer>
-
-</body>
-</html>
+        <h2 style="font-size: 2.5rem; margin-bottom: 10px; color: #
